@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageButton
+        android:id="@+id/btnPhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:text="photo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.037"
+        app:srcCompat="@drawable/baseline_camera_alt_24"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/btnVideo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnPhoto"
+        android:layout_marginTop="24dp"
+        android:onClick="onClickVideo"
+        app:layout_constraintEnd_toEndOf="@+id/btnPhoto"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/btnPhoto"
+        app:layout_constraintTop_toBottomOf="@+id/btnPhoto"
+        app:srcCompat="@drawable/baseline_missed_video_call_24"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"></ImageButton>
+
+    <ImageView
+        android:id="@+id/ivPhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnVideo"
+        android:layout_marginTop="32dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintEnd_toEndOf="@+id/btnPhoto"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btnPhoto"
+        app:layout_constraintTop_toBottomOf="@+id/btnVideo"></ImageView>
+
+    <ImageButton
+        android:id="@+id/btnWeb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="8dp"
+        android:layout_weight="1"
+        android:text="Web"
+        app:layout_constraintBottom_toBottomOf="@+id/btnPhoto"
+        app:layout_constraintStart_toEndOf="@+id/btnCall"
+        app:layout_constraintTop_toTopOf="@+id/btnPhoto"
+        app:srcCompat="@drawable/baseline_web_24"
+        tools:ignore="DuplicateClickableBoundsCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <ImageButton
+        android:id="@+id/btnMap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+
+        android:layout_marginStart="3dp"
+        android:contentDescription="@string/map"
+
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnPhoto"
+        app:layout_constraintStart_toEndOf="@+id/btnPhoto"
+        app:layout_constraintTop_toTopOf="@+id/btnPhoto"
+        app:srcCompat="@drawable/baseline_map_24" />
+
+    <ImageButton
+        android:id="@+id/btnCall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="8dp"
+        android:layout_weight="1"
+        android:text="Call"
+        app:layout_constraintBottom_toBottomOf="@+id/btnPhoto"
+        app:layout_constraintStart_toEndOf="@+id/btnMap"
+        app:layout_constraintTop_toTopOf="@+id/btnPhoto"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/baseline_local_phone_24"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
